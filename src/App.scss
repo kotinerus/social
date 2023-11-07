@@ -72,14 +72,6 @@ body {
   }
 }
 
-.exitButton {
-  position: absolute;
-  border: none;
-  cursor: pointer;
-  svg {
-    fill: $snow-white;
-  }
-}
 @media screen and (min-width: 1024px) {
   .profileDivHidden {
     height: 8vh;
@@ -118,13 +110,6 @@ body {
     .info {
       gap: 1rem;
     }
-  }
-
-  .exitButton {
-    height: 48px;
-    width: 48px;
-    top: calc(0% + 32px);
-    left: calc(90% - 32px);
   }
 }
 @media screen and (max-width: 1023px) {

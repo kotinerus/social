@@ -27,6 +27,21 @@ $snow-white: #f0ebd8;
     cursor: pointer;
   }
 }
+.exitButton {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  svg {
+    fill: $snow-white;
+  }
+}
+
+.exitButton {
+  height: 48px;
+  width: 48px;
+  top: calc(0% + 32px);
+  left: calc(90% - 32px);
+}
 
 @media screen and (min-width: 1024px) {
   .postsPanel {

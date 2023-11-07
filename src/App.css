@@ -72,15 +72,6 @@ body {
   overflow-y: scroll;
 }
 
-.exitButton {
-  position: absolute;
-  border: none;
-  cursor: pointer;
-}
-.exitButton svg {
-  fill: #f0ebd8;
-}
-
 @media screen and (min-width: 1024px) {
   .profileDivHidden {
     height: 8vh;
@@ -121,12 +112,6 @@ body {
   }
   .profileDiv .info {
     gap: 1rem;
-  }
-  .exitButton {
-    height: 48px;
-    width: 48px;
-    top: calc(0% + 32px);
-    left: calc(90% - 32px);
   }
 }
 @media screen and (max-width: 1023px) {
