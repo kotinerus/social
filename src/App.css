@@ -100,10 +100,18 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 1fr 2fr;
+  text-align: center;
+  grid-template-columns: 1fr 2fr 1fr;
   width: 90%;
   left: 5%;
   height: 14vh;
+}
+.friendPanel .row svg {
+  width: 64px;
+  cursor: pointer;
+}
+.friendPanel .row svg:hover {
+  fill: #0d1321;
 }
 .friendPanel .row img {
   position: relative;
@@ -137,4 +145,51 @@ body {
   background-color: #f0ebd8;
   color: #0d1321;
   transition: 0.45s;
+}
+
+.postsPanel {
+  position: relative;
+  left: 1%;
+  top: 1%;
+  width: 98%;
+  background-color: #3e5c76;
+  display: inline;
+  grid-template-rows: 1fr 1fr;
+}
+.postsPanel .imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.postsPanel .imgDiv img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+}
+.postsPanel article {
+  height: 50%;
+}
+.postsPanel .expandButton {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 25%;
+  border: solid 2px #0d1321;
+  border-radius: 45px;
+  background-color: #0d1321;
+  color: #f0ebd8;
+  cursor: pointer;
+}
+.postsPanel .exitButton {
+  position: absolute;
+  background-color: #3e5c76;
+  border: none;
+  height: 48px;
+  width: 48px;
+  top: calc(0% + 32px);
+  left: 90%;
+}
+.postsPanel .exitButton svg {
+  fill: #f0ebd8;
 }/*# sourceMappingURL=App.css.map */

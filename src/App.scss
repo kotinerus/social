@@ -104,10 +104,18 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr 2fr;
+    text-align: center;
+    grid-template-columns: 1fr 2fr 1fr;
     width: 90%;
     left: 5%;
     height: 14vh;
+    svg {
+      width: 64px;
+      cursor: pointer;
+    }
+    svg:hover {
+      fill: $dark-blue;
+    }
     img {
       position: relative;
       object-fit: cover;
@@ -142,4 +150,53 @@ body {
   background-color: $snow-white;
   color: $dark-blue;
   transition: 0.45s;
+}
+.postsPanel {
+  position: relative;
+  left: 1%;
+  top: 1%;
+  width: 98%;
+  background-color: $light-blue;
+  display: inline;
+  grid-template-rows: 1fr 1fr;
+
+  .imgDiv {
+    // height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      object-fit: cover;
+      width: 50%;
+    }
+  }
+  article {
+    height: 50%;
+  }
+
+  .expandButton {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 25%;
+    border: solid 2px $dark-blue;
+    border-radius: 45px;
+    background-color: $dark-blue;
+    color: $snow-white;
+    cursor: pointer;
+  }
+  .exitButton {
+    position: absolute;
+    background-color: $light-blue;
+    border: none;
+    height: 48px;
+    width: 48px;
+    top: calc(0% + 32px);
+    left: 90%;
+    svg {
+      fill: $snow-white;
+    }
+  }
 }
