@@ -1,10 +1,17 @@
 {
   "files": {
-    "main.css": "/social/static/css/main.1929adb6.css",
-    "main.js": "/social/static/js/main.465465a4.js",
+    "main.css": "/social/static/css/main.20e0c6da.css",
+    "main.js": "/social/static/js/main.ddde47d6.js",
     "static/media/avatar.jpg": "/social/static/media/avatar.4fdf7db09caa6e822547.jpg",
+    "static/media/pesto.jpg": "/social/static/media/pesto.857159b8c5bae86d726f.jpg",
+    "static/media/tofu.jpg": "/social/static/media/tofu.7e7d3445c74e30a7afa8.jpg",
+    "static/media/jaglana.jpeg": "/social/static/media/jaglana.fb75f4cbdfa5784203c1.jpeg",
+    "static/media/curry_ciecierzyca.jpg": "/social/static/media/curry_ciecierzyca.dc8c6e66897f682234ee.jpg",
     "static/media/makaron.jpg": "/social/static/media/makaron.d6264f15385596e6a236.jpg",
     "static/media/curry.jpg": "/social/static/media/curry.8baa0f3047b6d940a348.jpg",
+    "static/media/salatka.jpeg": "/social/static/media/salatka.defba4ac5c6ffff154a3.jpeg",
+    "static/media/ratatouille.jpg": "/social/static/media/ratatouille.58fc00aa0ea8849d06d5.jpg",
+    "static/media/truskawka.jpeg": "/social/static/media/truskawka.f71d64703c1fff059e26.jpeg",
     "static/media/w3.jpg": "/social/static/media/w3.90875a77e1f473a1ca52.jpg",
     "static/media/m1.jpg": "/social/static/media/m1.4cf03ab0fc1099f3a177.jpg",
     "static/media/m4.jpg": "/social/static/media/m4.5c77a2ec2baca3a740b6.jpg",
@@ -14,11 +21,11 @@
     "static/media/w1.jpg": "/social/static/media/w1.7a911581a4dffe47189a.jpg",
     "static/media/m3.jpg": "/social/static/media/m3.f076d779ea68b72c314b.jpg",
     "index.html": "/social/index.html",
-    "main.1929adb6.css.map": "/social/static/css/main.1929adb6.css.map",
-    "main.465465a4.js.map": "/social/static/js/main.465465a4.js.map"
+    "main.20e0c6da.css.map": "/social/static/css/main.20e0c6da.css.map",
+    "main.ddde47d6.js.map": "/social/static/js/main.ddde47d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.1929adb6.css",
-    "static/js/main.465465a4.js"
+    "static/css/main.20e0c6da.css",
+    "static/js/main.ddde47d6.js"
   ]
 }
