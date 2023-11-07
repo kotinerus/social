@@ -2,53 +2,35 @@ import { useEffect, useState } from "react";
 import { users } from "./users";
 
 import { children } from "react";
+import { Friend } from "./FRIEND_COMP/Friend";
+import { ActionPanel } from "./ACTION_COMP/ActionPanel";
+import { Post } from "./POST_COMP/Post";
 // import "./App.css";
 
 export function Profile() {
   const [isOpenProfile, setIsOpenProfile] = useState(true);
   const [currOpen, setCurrOpen] = useState("friends");
+  const [currUser, setCurrUser] = useState(1);
+  const userProfile = users.filter((item) => item.id === currUser)[0];
 
   function handleSwitchOfPage(name) {
     setCurrOpen(name);
   }
-  // const obiet =
-  //   .posty;
-  // console.log(obiet);
-  // console.log(obiet);
+  function handleSwitchUser(id) {
+    setCurrUser(id);
+  }
 
-  // const person = ;
-  // console.log(person);
   return (
     <>
       {isOpenProfile ? (
         <div className="profileDiv">
           <div className="image">
-            <img src={require("./img/avatar.jpg")} alt="testIMG" />
+            <img src={userProfile.img} alt="avatarImg" />
           </div>
-          <div className="info">
-            {currOpen === "friends" ? (
-              users.map((i) => <Friend name={i.name} img={i.img} />)
-            ) : currOpen === "profile" ? (
-              users
-                .filter((item) => item.id === 1)[0]
-                .posty.map((i) => <Postst img={i.img}>{i.post}</Postst>)
-            ) : (
-              <Adding />
-            )}
-          </div>
-          <div className="actions">
-            <ActionPanel handleChange={handleSwitchOfPage} name={"adding"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z" />
-              </svg>
 
-              <h2>Dodaj znajomego</h2>
-            </ActionPanel>
+          <div className="actions">
+            <h1>{userProfile.name}</h1>
+
             <ActionPanel handleChange={handleSwitchOfPage} name={"profile"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +53,19 @@ export function Profile() {
               <h2>Lista znajomych</h2>
             </ActionPanel>
           </div>
+          <div className="info">
+            {currOpen === "friends"
+              ? userProfile.friends.map((i) => (
+                  <Friend
+                    person={users[i - 1]}
+                    key={users[i - 1].id}
+                    onUserChange={handleSwitchUser}
+                  />
+                ))
+              : userProfile.posty.map((i) => (
+                  <Post img={i.img}>{i.post} </Post>
+                ))}
+          </div>
         </div>
       ) : (
         <div className="profileDivHidden">
@@ -80,84 +75,5 @@ export function Profile() {
         </div>
       )}
     </>
-  );
-}
-function Postst({ img, children }) {
-  const [overflow, setOverflow] = useState(false);
-  function handleChangeOverflow() {
-    setOverflow(!overflow);
-  }
-  return (
-    <>
-      <div
-        className="postsPanel"
-        style={
-          overflow
-            ? { overflow: "visible", height: "auto" }
-            : { overflow: "hidden", height: "30%" }
-        }
-      >
-        {overflow && (
-          <button className="exitButton" onClick={() => handleChangeOverflow()}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-            </svg>
-          </button>
-        )}
-        {overflow && (
-          <div className="imgDiv">
-            <img src={img}></img>
-          </div>
-        )}
-
-        {children}
-        {!overflow && (
-          <button
-            className="expandButton"
-            onClick={() => handleChangeOverflow()}
-          >
-            ROZWIŃ
-          </button>
-        )}
-      </div>
-    </>
-  );
-}
-function ActionPanel({ children, handleChange, name }) {
-  return (
-    <div className="actionPanel" onClick={() => handleChange(name)}>
-      {children}
-    </div>
-  );
-}
-function Adding() {
-  return <h1>TEST ADDING</h1>;
-}
-
-export function Friend({ name, img }) {
-  // console.log(person.name);
-  return (
-    <div className="friendPanel">
-      <div className="row">
-        <div>
-          <img src={img} />
-        </div>
-        <div>
-          <h2>{name}</h2>
-        </div>
-        <div>
-          {" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z" />
-          </svg>
-        </div>
-      </div>
-    </div>
   );
 }

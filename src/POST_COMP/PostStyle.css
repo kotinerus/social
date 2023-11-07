@@ -1,0 +1,97 @@
+.postsPanel {
+  position: relative;
+  background-color: #3e5c76;
+  display: inline;
+  grid-template-rows: 1fr 1fr;
+}
+.postsPanel .imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.postsPanel .imgDiv img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.postsPanel article {
+  position: relative;
+}
+.postsPanel .expandButton {
+  position: absolute;
+  border: solid 2px #0d1321;
+  border-radius: 45px;
+  background-color: #0d1321;
+  color: #f0ebd8;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .postsPanel {
+    left: 1%;
+    top: 1%;
+    width: 98%;
+    border-radius: 45px;
+  }
+  .postsPanel .imgDiv img {
+    width: 50%;
+  }
+  .postsPanel article {
+    width: 95%;
+    left: 2.5%;
+    font-size: 0.8rem;
+  }
+  .postsPanel .expandButton {
+    bottom: 0%;
+    left: 50%;
+    translate: -50% -25%;
+    width: 25%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .postsPanel {
+    position: relative;
+    background-color: #3e5c76;
+    display: inline;
+    grid-template-rows: 1fr 1fr;
+  }
+  .postsPanel .imgDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .postsPanel .imgDiv img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .postsPanel article {
+    position: relative;
+  }
+  .postsPanel .expandButton {
+    position: absolute;
+    border: solid 2px #0d1321;
+    border-radius: 45px;
+    background-color: #0d1321;
+    color: #f0ebd8;
+    cursor: pointer;
+  }
+  .postsPanel {
+    left: 1%;
+    top: 1%;
+    width: 98%;
+    border-radius: 45px;
+  }
+  .postsPanel .imgDiv img {
+    width: 50%;
+  }
+  .postsPanel article {
+    width: 95%;
+    left: 2.5%;
+    font-size: 0.8rem;
+  }
+  .postsPanel .expandButton {
+    bottom: 0%;
+    left: 50%;
+    translate: -50% -25%;
+    width: 25%;
+  }
+}/*# sourceMappingURL=PostStyle.css.map */

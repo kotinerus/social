@@ -1,0 +1,43 @@
+.actionPanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+}
+.actionPanel svg {
+  justify-self: center;
+}
+
+.actionPanel:hover {
+  background-color: #f0ebd8;
+  color: #0d1321;
+  transition: 0.45s;
+}
+
+@media screen and (min-width: 1024px) {
+  .actionPanel {
+    width: 100%;
+    height: 33.3333333333%;
+    text-align: center;
+  }
+  .actionPanel svg {
+    height: 50%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .actionPanel {
+    background-color: #3e5c76;
+    border: solid 1px black;
+    border-radius: 25px;
+    width: 90%;
+    height: 33.3333333333%;
+    text-align: center;
+  }
+  .actionPanel svg {
+    height: 50%;
+    width: 50%;
+  }
+}/*# sourceMappingURL=ActionPanelStyle.css.map */

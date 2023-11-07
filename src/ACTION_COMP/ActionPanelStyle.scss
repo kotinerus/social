@@ -1,0 +1,50 @@
+$dark-blue: #0d1321;
+$light-blue: #3e5c76;
+$snow-white: #f0ebd8;
+.actionPanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  svg {
+    justify-self: center;
+  }
+}
+
+.actionPanel:hover {
+  background-color: $snow-white;
+  color: $dark-blue;
+  transition: 0.45s;
+}
+
+@media screen and (min-width: 1024px) {
+  .actionPanel {
+    width: 100%;
+    height: calc(100% / 3);
+    text-align: center;
+    svg {
+      height: 50%;
+      width: 50%;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .actionPanel {
+    background-color: $light-blue;
+    border: solid 1px black;
+    border-radius: 25px;
+    width: 90%;
+    height: calc(100% / 3);
+    text-align: center;
+    svg {
+      height: 50%;
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+}

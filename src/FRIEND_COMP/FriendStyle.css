@@ -1,0 +1,56 @@
+.friendPanel {
+  background-color: #3e5c76;
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 1fr 2fr;
+}
+.friendPanel svg {
+  cursor: pointer;
+}
+.friendPanel svg:hover {
+  fill: #0d1321;
+}
+.friendPanel img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  .friendPanel {
+    border-radius: 25px;
+    width: 100%;
+    width: 90%;
+    left: 5%;
+    height: 14vh;
+  }
+  .friendPanel img {
+    width: 10vh;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .friendPanel {
+    height: auto;
+    background-color: #3e5c76;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 1fr 2fr;
+  }
+  .friendPanel .imgDiv {
+    height: 100%;
+    position: relative;
+  }
+  .friendPanel .imgDiv img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 100%;
+    width: 40%;
+  }
+}/*# sourceMappingURL=FriendStyle.css.map */

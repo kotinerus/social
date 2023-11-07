@@ -5,6 +5,7 @@ body {
   background-color: #0d1321;
   color: #f0ebd8;
   font-family: lato;
+  overflow-y: auto;
 }
 
 ::-webkit-scrollbar {
@@ -27,37 +28,25 @@ body {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  height: 8vh;
-  width: 20%;
   float: right;
 }
 .profileDivHidden a {
-  margin-top: 1rem;
   background-color: #f0ebd8;
-  border-radius: 65px;
-  width: 100%;
   text-align: center;
   text-decoration: none;
 }
 .profileDivHidden a h1 {
   color: #0d1321;
-  margin: 0;
-  height: 80%;
-  line-height: 6.4vh;
 }
 
 .profileDiv {
   display: grid;
   background-color: #1b2846;
   position: relative;
-  left: 15vw;
-  top: 5vh;
-  width: 70vw;
-  height: 90vh;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "img info" "actions info";
-  border-radius: 50px;
+  border-radius: 45px;
 }
 .profileDiv .image {
   grid-area: img;
@@ -65,8 +54,6 @@ body {
 .profileDiv .image img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  height: 100%;
   border-radius: 50px 0 0;
 }
 .profileDiv .actions {
@@ -76,120 +63,106 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 0;
-  margin: 0;
 }
 .profileDiv .info {
   grid-area: info;
   border-radius: 0 50px 50px 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   overflow-y: scroll;
 }
 
-.friendPanel {
-  background-color: #3e5c76;
-  height: 15vh;
-  border-radius: 25px;
-  width: 100%;
-}
-.friendPanel .row {
-  position: relative;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  grid-template-columns: 1fr 2fr 1fr;
-  width: 90%;
-  left: 5%;
-  height: 14vh;
-}
-.friendPanel .row svg {
-  width: 64px;
-  cursor: pointer;
-}
-.friendPanel .row svg:hover {
-  fill: #0d1321;
-}
-.friendPanel .row img {
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 10vh;
-  border-radius: 90px;
-}
-
-.actionPanel {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  height: 33.3333333333%;
-  cursor: pointer;
-}
-.actionPanel svg {
-  justify-self: center;
-  height: 50%;
-  width: 50%;
-}
-
-.actionPanel:nth-child(3) {
-  border-radius: 0 0 0 50px;
-}
-
-.actionPanel:hover {
-  background-color: #f0ebd8;
-  color: #0d1321;
-  transition: 0.45s;
-}
-
-.postsPanel {
-  position: relative;
-  left: 1%;
-  top: 1%;
-  width: 98%;
-  background-color: #3e5c76;
-  display: inline;
-  grid-template-rows: 1fr 1fr;
-}
-.postsPanel .imgDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.postsPanel .imgDiv img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 50%;
-}
-.postsPanel article {
-  height: 50%;
-}
-.postsPanel .expandButton {
+.exitButton {
   position: absolute;
-  bottom: 0%;
-  left: 50%;
-  translate: -50% -50%;
-  width: 25%;
-  border: solid 2px #0d1321;
-  border-radius: 45px;
-  background-color: #0d1321;
-  color: #f0ebd8;
-  cursor: pointer;
-}
-.postsPanel .exitButton {
-  position: absolute;
-  background-color: #3e5c76;
   border: none;
-  height: 48px;
-  width: 48px;
-  top: calc(0% + 32px);
-  left: 90%;
+  cursor: pointer;
 }
-.postsPanel .exitButton svg {
+.exitButton svg {
   fill: #f0ebd8;
+}
+
+@media screen and (min-width: 1024px) {
+  .profileDivHidden {
+    height: 8vh;
+    width: 20%;
+  }
+  .profileDivHidden a {
+    margin-top: 1rem;
+    border-radius: 65px;
+    width: 100%;
+  }
+  .profileDivHidden a h1 {
+    height: 80%;
+    line-height: 6.4vh;
+  }
+  .profileDiv {
+    left: 15vw;
+    top: 5vh;
+    width: 70vw;
+    height: 90vh;
+  }
+  .profileDiv .image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .profileDiv .image img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .profileDiv .actions {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .profileDiv .info {
+    gap: 1rem;
+  }
+  .exitButton {
+    height: 48px;
+    width: 48px;
+    top: calc(0% + 32px);
+    left: calc(90% - 32px);
+  }
+}
+@media screen and (max-width: 1023px) {
+  body {
+    overflow-x: hidden;
+  }
+  .profileDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .profileDiv .image {
+    height: 40vh;
+    width: 100vw;
+    grid-area: img;
+  }
+  .profileDiv .image img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  .profileDiv .actions {
+    height: 40vh;
+    gap: 0.5rem;
+    border-radius: 0;
+  }
+  .profileDiv .actions h1 {
+    text-transform: uppercase;
+  }
+  .profileDiv .info {
+    grid-area: info;
+    border-radius: 0 50px 50px 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: visible;
+    gap: 1rem;
+  }
 }/*# sourceMappingURL=App.css.map */
