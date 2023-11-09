@@ -2,37 +2,31 @@ $dark-blue: #0d1321;
 $light-blue: #3e5c76;
 $snow-white: #f0ebd8;
 
-.friendPanel {
-  background-color: $light-blue;
-  cursor: pointer;
-  position: relative;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  grid-template-columns: 1fr 2fr;
-
-  svg {
-    cursor: pointer;
-  }
-  svg:hover {
-    fill: $dark-blue;
-  }
-  img {
-    position: relative;
-    object-fit: cover;
-  }
-}
 @media screen and (min-width: 1024px) {
   .friendPanel {
-    border-radius: 25px;
-    width: 100%;
+    background-color: $dark-blue;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 1fr 2fr;
+    border-radius: 10px;
     width: 90%;
     left: 5%;
-    height: 14vh;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    position: relative;
 
+    cursor: pointer;
+    svg {
+      cursor: pointer;
+    }
+    svg:hover {
+      fill: $dark-blue;
+    }
     img {
-      width: 10vh;
+      object-fit: contain;
+      width: clamp(6rem, 10rem, 6vw);
     }
   }
 }

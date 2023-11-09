@@ -13,13 +13,13 @@ export function Post({ img, children }) {
         style={
           overflow
             ? { overflow: "visible", height: "auto" }
-            : { overflow: "hidden", height: "30%" }
+            : { overflow: "hidden", height: "40%" }
         }
       >
         {overflow && (
           <button
             className="exitButton"
-            style={{ backgroundColor: "#3e5c76" }}
+            style={{ backgroundColor: "#0d1321" }}
             onClick={() => handleChangeOverflow()}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">

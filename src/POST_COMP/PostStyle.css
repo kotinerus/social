@@ -1,73 +1,7 @@
-.postsPanel {
-  position: relative;
-  background-color: #3e5c76;
-  display: inline;
-  grid-template-rows: 1fr 1fr;
-}
-.postsPanel .imgDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.postsPanel .imgDiv img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.postsPanel article {
-  position: relative;
-}
-.postsPanel .expandButton {
-  position: absolute;
-  border: solid 2px #0d1321;
-  border-radius: 45px;
-  background-color: #0d1321;
-  color: #f0ebd8;
-  cursor: pointer;
-}
-
-.exitButton {
-  position: absolute;
-  border: none;
-  cursor: pointer;
-}
-.exitButton svg {
-  fill: #f0ebd8;
-}
-
-.exitButton {
-  height: 48px;
-  width: 48px;
-  top: calc(0% + 32px);
-  left: calc(90% - 32px);
-}
-
 @media screen and (min-width: 1024px) {
   .postsPanel {
-    left: 1%;
-    top: 1%;
-    width: 98%;
-    border-radius: 45px;
-  }
-  .postsPanel .imgDiv img {
-    width: 50%;
-  }
-  .postsPanel article {
-    width: 95%;
-    left: 2.5%;
-    font-size: 0.8rem;
-  }
-  .postsPanel .expandButton {
-    bottom: 0%;
-    left: 50%;
-    translate: -50% -25%;
-    width: 25%;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .postsPanel {
     position: relative;
-    background-color: #3e5c76;
-    display: inline;
+    background-color: #0d1321;
     grid-template-rows: 1fr 1fr;
   }
   .postsPanel .imgDiv {
@@ -76,38 +10,99 @@
     align-items: center;
   }
   .postsPanel .imgDiv img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .postsPanel article {
-    position: relative;
-  }
-  .postsPanel .expandButton {
-    position: absolute;
-    border: solid 2px #0d1321;
-    border-radius: 45px;
-    background-color: #0d1321;
-    color: #f0ebd8;
-    cursor: pointer;
-  }
-  .postsPanel {
-    left: 1%;
-    top: 1%;
-    width: 98%;
-    border-radius: 45px;
-  }
-  .postsPanel .imgDiv img {
+    -o-object-fit: contain;
+       object-fit: contain;
     width: 50%;
   }
   .postsPanel article {
-    width: 95%;
-    left: 2.5%;
-    font-size: 0.8rem;
+    position: relative;
+    width: 80%;
+    left: 10%;
+  }
+  .postsPanel h2 {
+    font-size: 2rem;
+  }
+  .postsPanel p {
+    font-size: 1.3rem;
   }
   .postsPanel .expandButton {
+    position: absolute;
+    border: solid 1px #f0ebd8;
+    border-radius: 45px;
+    background-color: #f0ebd8;
+    color: #0d1321;
+    cursor: pointer;
     bottom: 0%;
     left: 50%;
-    translate: -50% -25%;
-    width: 25%;
+    font-size: 1rem;
+    font-weight: 600;
+    translate: -50% -50%;
+    width: 15%;
+  }
+  .exitButton {
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    top: calc(0% + 32px);
+    left: calc(90% - 32px);
+  }
+  .exitButton svg {
+    fill: #f0ebd8;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .postsPanel {
+    position: relative;
+    background-color: #0d1321;
+    grid-template-rows: 1fr 1fr;
+  }
+  .postsPanel .imgDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .postsPanel .imgDiv img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 50%;
+  }
+  .postsPanel article {
+    position: relative;
+    width: 80%;
+    left: 10%;
+  }
+  .postsPanel h2 {
+    font-size: 2rem;
+  }
+  .postsPanel p {
+    font-size: 1.3rem;
+  }
+  .postsPanel .expandButton {
+    position: absolute;
+    border: solid 1px #f0ebd8;
+    border-radius: 45px;
+    background-color: #f0ebd8;
+    color: #0d1321;
+    cursor: pointer;
+    bottom: 0%;
+    left: 50%;
+    font-size: 1rem;
+    font-weight: 600;
+    translate: -50% -50%;
+    width: 15%;
+  }
+  .exitButton {
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    top: calc(0% + 32px);
+    left: calc(90% - 32px);
+  }
+  .exitButton svg {
+    fill: #f0ebd8;
   }
 }/*# sourceMappingURL=PostStyle.css.map */

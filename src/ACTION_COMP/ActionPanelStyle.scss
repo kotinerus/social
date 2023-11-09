@@ -1,50 +1,52 @@
 $dark-blue: #0d1321;
 $light-blue: #3e5c76;
 $snow-white: #f0ebd8;
-.actionPanel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  cursor: pointer;
-  svg {
-    justify-self: center;
-  }
-}
-
-.actionPanel:hover {
-  background-color: $snow-white;
-  color: $dark-blue;
-  transition: 0.45s;
-}
 
 @media screen and (min-width: 1024px) {
   .actionPanel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    height: calc(100% / 3);
+    height: 100%;
     text-align: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: darken($color: $dark-blue, $amount: 0.5);
     svg {
-      height: 50%;
-      width: 50%;
+      justify-self: center;
+      height: 40%;
+      width: 40%;
     }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .actionPanel:hover {
+    background-color: $snow-white;
+    color: $dark-blue;
+    transition: 0.6s;
   }
 }
 @media screen and (max-width: 1023px) {
   .actionPanel {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    left: 5%;
+    justify-content: center;
+    align-items: center;
     background-color: $light-blue;
-    border: solid 1px black;
+    border: solid 2px $dark-blue;
     border-radius: 25px;
     width: 90%;
-    height: calc(100% / 3);
+    height: 20vh;
+    margin: 1rem 0;
     text-align: center;
     svg {
-      height: 50%;
-      width: 50%;
+      justify-self: end;
+      height: 40%;
+      width: 40%;
     }
   }
-}
-
-@media screen and (max-width: 767px) {
 }
